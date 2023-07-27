@@ -22,6 +22,16 @@ body {
     overflow-x: hidden;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0rem 1rem;
+}
+
 //styling for top navabr
 .nav {
     display: flex;
@@ -52,14 +62,16 @@ body {
 }
 
 .mainContainer {
+
     .hero {
-        padding: 2.5rem 0;
+        padding: 2.5rem 1rem;
         display: flex;
         flex-direction: column;
         flex-shrink: 0;
         align-items: center;
         justify-content: center;
         gap: 2rem;
+        margin-bottom: 6rem;
 
         .main_text {
             font-family: $open-sans;
@@ -126,7 +138,320 @@ body {
         }
 
     }
+
+    .features {
+        padding: 2.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        font-family: $urbanist;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 6rem;
+
+        h2 {
+
+            width: min(100vw, 120vh);
+
+            font-size: 3.25rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.075rem;
+            background: linear-gradient(90deg, #FF3BFF 0%, #ECBFBF 38.02%, #5C24FF 75.83%, #D94FD5 100%, #FF3BFF 0%, #ECBFBF 38.02%, #5C24FF 75.83%, #D94FD5 100%);
+            background-size: 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: text-bg-anim 2s linear alternate infinite;
+        }
+
+        .features_para {
+            color: #FFF;
+            text-align: center;
+            width: min(100vw, 120vh);
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%;
+            /* 3.2rem */
+        }
+
+
+        .elaboration {
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // flex-direction: column;
+
+            .circleAnim {
+                animation: rotate 2s ease infinite;
+                margin: 2rem;
+            }
+
+
+            .features_menu {
+                width: max-content;
+                display: flex;
+                padding: 2rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2rem;
+                border-radius: 1rem;
+                background: #181924;
+                // position: absolute;
+
+                .item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    p {
+                        color: #FFF;
+                        font-family: $urbanist;
+                        width: max-content;
+                        font-size: 1.5rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 1.75rem;
+                        /* 116.667% */
+                    }
+                }
+
+                .line {
+                    width: 29.5rem;
+                    height: 0.0625rem;
+                    opacity: 0.11999999731779099;
+                    background: #FFF;
+                }
+            }
+
+            .feature_menu_1 {
+                align-self: flex-start;
+            }
+
+            .feature_menu_2 {
+                align-self: flex-end;
+            }
+        }
+
+
+    }
+
+    .about {
+        padding: 2.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        font-family: $urbanist;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 6rem;
+
+        .about_heading {
+            // width: min(100vw, 120vh);
+            font-size: 3.25rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.075rem;
+            background: linear-gradient(90deg, #FF3BFF 0%, #ECBFBF 38.02%, #5C24FF 75.83%, #D94FD5 100%, #FF3BFF 0%, #ECBFBF 38.02%, #5C24FF 75.83%, #D94FD5 100%);
+            background-size: 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: text-bg-anim 2s linear alternate infinite;
+        }
+
+        .cardcontainer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            .card {
+                border-radius: 2.5rem;
+                background-color: #181924;
+                position: relative;
+                padding: 2rem;
+                min-height: 42vh;
+                width: min(70vh, 90vw);
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                margin: 1rem;
+
+
+
+                .texts {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1rem;
+                    flex-shrink: 0;
+                    position: relative;
+                    z-index: 200;
+
+                    h2 {
+                        font-family: $urbanist;
+                        height: fit-content;
+                        text-align: left;
+                        font-size: 3.375rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 110%;
+                        background: linear-gradient(90deg, #4E4BE4 1.04%, #E862FE 100%);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        /* 3.7125rem */
+                    }
+
+                    p {
+                        color: #FFF;
+                        font-family: $urbanist;
+                        font-size: 1.375rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 1.875rem;
+                        // width: 30vw;
+                        text-align: left;
+                        /* 136.364% */
+                    }
+
+
+                }
+
+                button {
+                    position: relative;
+                    z-index: 200;
+                    display: flex;
+                    padding: 0.9375rem 1.875rem;
+                    align-items: center;
+                    gap: 1.25rem;
+                    border-radius: 1.875rem;
+                    background: #4F4CE5;
+                    border: none;
+                    color: #FFF;
+                    font-family: $urbanist;
+                    font-size: 1rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 1.5rem;
+                    /* 150% */
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    /* medium/blue */
+                    box-shadow: 0px 5px 15px 0px rgba(32, 91, 241, 0.20);
+                    transition: box-shadow 0.5s ease;
+
+                    &:hover {
+                        box-shadow: 0px 0px 25px 0px rgba(32, 91, 241, 0.60);
+                    }
+                }
+
+                img {
+                    position: absolute;
+                    bottom: -13rem;
+                    right: -16rem;
+                    // z-index: -1;
+                }
+            }
+
+            .third_card {
+                width: min(100vh, 90vw);
+
+                .texts {
+                    h2 {
+                        // line-height: 2.5rem;
+                        font-size: 3rem;
+                        padding-bottom: 0.5rem;
+                        overflow: visible;
+                    }
+                }
+
+                img {
+                    right: -30rem;
+                }
+            }
+        }
+    }
+
+    .prefooter {
+        padding: 2.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        font-family: $urbanist;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 0rem;
+
+        h2 {
+            font-family: $open-sans;
+            font-size: 3.25rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.075rem;
+            background: linear-gradient(90deg, #FF3BFF 0%, #ECBFBF 38.02%, #5C24FF 75.83%, #D94FD5 100%, #FF3BFF 0%, #ECBFBF 38.02%, #5C24FF 75.83%, #D94FD5 100%);
+            background-size: 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: text-bg-anim 2s linear alternate infinite;
+        }
+
+        p {
+            color: #FFF;
+            text-align: center;
+            font-family: $open-sans;
+            font-size: 1.8125rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 2.0625rem;
+            /* 113.793% */
+            letter-spacing: 0.045rem;
+        }
+    }
 }
+
+.footer {
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    font-family: $urbanist;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    // margin-bottom: 6rem;
+
+    p {
+        color: #FFF;
+        text-align: center;
+        font-family: $open-sans;
+        font-size: 1.8125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.0625rem;
+        /* 113.793% */
+        letter-spacing: 0.045rem;
+
+        strong {
+            font-weight: 700;
+        }
+    }
+}
+
+
 
 .form {
     display: flex;
@@ -218,6 +543,16 @@ body {
     }
 }
 
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @media screen and (orientation : landscape) {
     .desktop_scene {
         width: 70%;
@@ -229,6 +564,22 @@ body {
     }
 }
 
+
+@media screen and (max-width:1600px) {
+    .elaboration {
+        flex-direction: column;
+    }
+
+    .features {
+
+        .feature_menu_1,
+        .feature_menu_2 {
+            align-self: center !important;
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {}
 
 @media screen and (max-width:1200px) and (orientation : portrait) {
     .scene {
@@ -242,9 +593,23 @@ body {
         }
     }
 
+
+
+
+
     @media screen and (max-width:900px) {
         :root {
             font-size: 12px;
+        }
+
+        .mainContainer>div {
+            margin-bottom: -2rem !important;
+        }
+
+        .card {
+            img {
+                transform: translate(40%, 20%);
+            }
         }
     }
 }
