@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // overflow-x: hidden;
+}
+
+//variables
+$bg-color: #000000;
+$fg-white: #FFF;
+$fg-white-50: rgba(255, 255, 255, 0.5);
+$fg-white2: #E4E4E4;
+$open-sans: var(--font-opensans);
+$urbanist : var(--font-urbanist);
+$abeezee: var(--font-aBeeZee);
+$spaceG: var(--font-spaceG);
+
+//default body background color
+body {
+    background-color: $bg-color;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+//styling for top navabr
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    border-bottom: 0.0625rem solid $fg-white2;
+
+    //logo inside navbar
+    img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $fg-white;
+        font-family: $spaceG;
+        font-weight: 400;
+        font-size: 1.25rem;
+
+        div {
+            padding: 0.5rem 1rem;
+            border-radius: 6.25rem;
+            border: 2px solid #FFF;
+        }
+    }
+}
+
+.mainContainer {
+    .hero {
+        padding: 2.5rem 0;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        .main_text {
+            font-family: $open-sans;
+
+            font-size: 3.25rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.075rem;
+            background: linear-gradient(90deg, #FF3BFF 0%, #ECBFBF 38.02%, #5C24FF 75.83%, #D94FD5 100%, #FF3BFF 0%, #ECBFBF 38.02%, #5C24FF 75.83%, #D94FD5 100%);
+            background-size: 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: text-bg-anim 2s linear alternate infinite;
+        }
+
+        .company_name {
+            color: $fg-white;
+            font-family: $abeezee;
+            font-size: 4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.0875rem;
+        }
+
+        .subheading {
+            width: min(100vw, 80vh);
+            color: $fg-white;
+            text-align: center;
+            font-family: $open-sans;
+            font-size: 1.5rem;
+            font-style: normal;
+            min-height: max-content;
+            font-weight: 200;
+            letter-spacing: 0.045rem;
+        }
+
+        .scene {
+
+            position: relative;
+            overflow: visible;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            // border: 2px solid red;
+
+
+
+            .meshbg {
+                position: absolute;
+                width: 100%;
+                height: auto;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                // border: 2px solid yellow;
+                z-index: -1;
+            }
+
+        }
+
+    }
+}
+
+.form {
+    display: flex;
+    position: relative;
+    width: min(80vw, 50vh);
+    overflow: visible;
+
+    &::before {
+        content: " ";
+        position: absolute;
+        height: 105%;
+        width: 101%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(90deg, rgba(255, 59, 255, 1), rgba(236, 191, 191, 1), rgba(92, 36, 255, 1), rgba(217, 79, 213, 1));
+        border-radius: 100px;
+
+    }
+
+    input {
+        width: 100%;
+        border-radius: 100px;
+        background: #000 !important;
+        border: none;
+        padding: 1.3125rem 2rem;
+        color: $fg-white-50;
+        font-family: $spaceG;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        position: relative;
+
+        &:focus-visible,
+        &:focus,
+        &:focus-within {
+            border: 0;
+            outline: 0;
+        }
+
+
+
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #ffffff;
+        transition: background-color 5000s ease-in-out 0s;
+        box-shadow: inset 0 0 20px 20px #71707000;
+    }
+
+    button {
+        position: absolute;
+        right: 2%;
+        top: 50%;
+        transform: translate(0%, -50%);
+        height: 80%;
+        border-radius: 6.25rem;
+        border: 2px solid #FFF;
+        color: $fg-white;
+        background: #000;
+        text-align: center;
+        font-family: $spaceG;
+        padding: 1rem 1rem;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 300;
+        cursor: pointer;
+        transition: background 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            background: $fg-white;
+            color: $bg-color;
+        }
+    }
+}
+
+@keyframes text-bg-anim {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+@media screen and (orientation : landscape) {
+    .desktop_scene {
+        width: 70%;
+        overflow: visible;
+    }
+
+    .mobile_bg {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:1200px) and (orientation : portrait) {
+    .scene {
+        .desktop_scene {
+            display: none;
+        }
+
+        .mobile_bg {
+            width: 90%;
+            display: block;
+        }
+    }
+
+    @media screen and (max-width:900px) {
+        :root {
+            font-size: 12px;
+        }
+    }
+}
