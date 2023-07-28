@@ -3,6 +3,7 @@ import "../styles/app.scss"
 import { Open_Sans, Space_Grotesk, ABeeZee, Urbanist } from 'next/font/google'
 import Navbar from '@/components/server/navbar'
 import Footer from '@/components/server/footer'
+import { Slide, ToastContainer } from 'react-toastify'
 
 const opensans = Open_Sans({
   subsets: ['latin'],
@@ -49,6 +50,19 @@ export default function RootLayout({
       </head>
 
       <body className={`${opensans.variable} ${space_Grotesk.variable} ${aBeeZee.variable} ${urbanist.variable}`}>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar
+          newestOnTop
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+          transition={Slide}
+        />
         <Navbar />
         {children}
         <Footer />

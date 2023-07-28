@@ -2,7 +2,7 @@
 
 
 import React, { FormEvent, useEffect, useState } from 'react'
-import { ToastContainer, toast, Slide } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Form = ({ placeholder, btnAction }: { placeholder?: string, btnAction?: string }) => {
@@ -14,14 +14,13 @@ const Form = ({ placeholder, btnAction }: { placeholder?: string, btnAction?: st
 
         const id = toast.loading("Please wait...", {
             position: "top-right",
-            autoClose: 3000,
             hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
             theme: "colored",
-            toastId: "customId"
+            toastId: "customId",
         });
 
         const res = await fetch("/api/user/new", {
@@ -33,8 +32,12 @@ const Form = ({ placeholder, btnAction }: { placeholder?: string, btnAction?: st
         });
         const data = await res.json();
 
-        data.success ? toast.update(id, { render: `${data.message}`, type: "success", isLoading: false }) : toast.update(id, { render: `${data.message}`, type: "error", isLoading: false })
 
+        data.success ? toast.update(id, { render: `${data.message}`, type: "success", isLoading: false, autoClose: 3000, draggable: true, }) : toast.update(id, { render: `${data.message}`, type: "error", isLoading: false, autoClose: 3000, draggable: true, })
+
+        if (data.success) {
+            setEmail("");
+        }
 
     }
 
@@ -50,8 +53,6 @@ const Form = ({ placeholder, btnAction }: { placeholder?: string, btnAction?: st
         e.preventDefault();
         if (isValidEmail) {
             emailSubmitter();
-
-
 
         } else {
             toast.error('Enter proper email!', {
@@ -70,19 +71,6 @@ const Form = ({ placeholder, btnAction }: { placeholder?: string, btnAction?: st
 
     return (
         <>
-            <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar
-                newestOnTop
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="colored"
-                transition={Slide}
-            />
             <form action="" onSubmit={submitHandler} className='form'>
                 <input type="text" name="email" id="" placeholder={placeholder} value={email} onChange={(e): void => { setEmail(e.target.value) }} />
                 <button type='submit'>{btnAction}</button>

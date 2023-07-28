@@ -7,7 +7,10 @@ const navbar = (): React.JSX.Element => {
     return (
         <header className='nav'>
             <Image src={Logo} alt='logo for the website' />
-            <Link href={"/"} ><div className='logoBtn'>XEROCODEE</div></Link>
+            <div className='row'>
+                <Link href={"/admin"} ><div className='logoBtn adminbtn'>Admin</div></Link>
+                <Link href={"/"} ><div className='logoBtn'>XEROCODEE</div></Link>
+            </div>
         </header >
     )
 }
