@@ -1,19 +1,15 @@
 import User from '@/components/server/User'
 import React from 'react'
-import absoluteUrl from 'next-absolute-url'
-
-
-
-
+import "../../styles/admin.scss"
 
 
 async function getData() {
-    // const res = await fetch(`https://xerocodee-silk.vercel.app/api/user/all`, { method: "GET" })
-    // if (!res.ok) {
-    //     throw new Error('Failed to fetch data')
-    // }
-
-    // return res.json();
+    const res = await fetch(`${process.env.API_URI}/api/user/all`, { method: "GET" })
+    if (!res.ok) {
+        throw new Error('Failed to fetch data')
+    }
+    const data = await res.json();
+    return data;
 }
 
 
@@ -21,14 +17,14 @@ async function getData() {
 
 const page = async () => {
     const data = await getData();
-    // console.log(data);
+    const user = data.user;
 
     return (
         <main className='mainContainer'>
             <div className="users">
                 <h2>Waitlist users</h2>
                 <div className="usercontainer">
-                    <User email='helloworld' />
+                    {user.map((item: any) => <User email={item.email} key={item.id} />)}
                 </div>
             </div>
         </main>
