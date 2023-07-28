@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    // outline: 2px solid yellow;
+    outline-offset: -2px;
     // overflow-x: hidden;
 }
 
@@ -219,11 +221,39 @@ h6 {
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
             // flex-direction: column;
 
             .circleAnim {
                 // animation: rotate 2s ease infinite;
                 margin: 2rem;
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .circleImg {
+                    // transform: scale(0.8);
+                }
+
+                .circanimtext {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #FFF !important;
+                    text-align: center;
+                    /* /text-xl/regular */
+                    font-family: $spaceG;
+                    font-size: 2.25rem !important;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-transform: uppercase;
+                    width: 300px;
+                    // border: 2px solid red;
+                    opacity: 0;
+                }
             }
 
 
@@ -236,6 +266,7 @@ h6 {
                 gap: 2rem;
                 border-radius: 1rem;
                 background: #181924;
+                transform: scale(0.9);
                 // position: absolute;
 
                 .item {
@@ -644,6 +675,11 @@ h6 {
             img {
                 transform: translate(40%, 20%);
             }
+        }
+
+        .circleImg {
+            transform: scale(0.5) !important;
+
         }
     }
 }
