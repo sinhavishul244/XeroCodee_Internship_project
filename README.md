@@ -14,21 +14,31 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## FEATURES
 
-To learn more about Next.js, take a look at the following resources:
+### FRONTEND
+- Fully responsive design, works on both mobile and deskops
+- Use of sass for faster designing and greater control over stylesheet
+- Images are properly optimize using 'next/Image'
+- Creative animations using svg art to enhance user experience
+- admin page to see the users who joined the waitlist (working on admin authentication)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### BACKEND
+- There are two api endspoints
+    1. /api/user/new - POST request to add a new user email
+    2. /api/uesr/all - GET request to show all the users
+
+- Data is stored in MongoDB
+
+- Uses enviroment variables to ensure the security of data
+
+
+
+
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
