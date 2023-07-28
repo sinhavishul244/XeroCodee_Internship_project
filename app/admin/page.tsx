@@ -8,12 +8,12 @@ import absoluteUrl from 'next-absolute-url'
 
 
 async function getData() {
-    const res = await fetch(`https://xerocodee-silk.vercel.app/api/user/all`, { method: "GET" })
-    if (!res.ok) {
-        throw new Error('Failed to fetch data')
-    }
+    // const res = await fetch(`https://xerocodee-silk.vercel.app/api/user/all`, { method: "GET" })
+    // if (!res.ok) {
+    //     throw new Error('Failed to fetch data')
+    // }
 
-    return res.json();
+    // return res.json();
 }
 
 
@@ -21,7 +21,7 @@ async function getData() {
 
 const page = async () => {
     const data = await getData();
-    console.log(data);
+    // console.log(data);
 
     return (
         <main className='mainContainer'>
