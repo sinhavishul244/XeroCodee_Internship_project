@@ -35,6 +35,9 @@ const CircleAnim = () => {
         }).to('.circleImg', {
             scale: 1.1,
             duration: 3
+        }).to('.canim2', {
+            opacity: 0,
+            duration: 1
         })
     });
 

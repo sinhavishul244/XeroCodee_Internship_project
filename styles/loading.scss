@@ -1,0 +1,13 @@
+.loading_img {
+    animation: rotate 2s ease-in-out infinite alternate;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-2deg) scale(0.2);
+    }
+
+    100% {
+        transform: rotate(2deg) scale(0.2);
+    }
+}

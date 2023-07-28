@@ -48,9 +48,6 @@ h6 {
     width: 100%;
     flex-direction: column;
 
-    img {
-        transform: scale(0.2);
-    }
 
     h2 {
         font-family: $open-sans;
@@ -232,9 +229,9 @@ h6 {
                 align-items: center;
                 justify-content: center;
 
-                .circleImg {
-                    // transform: scale(0.8);
-                }
+                // .circleImg {
+                //     // transform: scale(0.8);
+                // }
 
                 .circanimtext {
                     position: absolute;
@@ -677,8 +674,12 @@ h6 {
             }
         }
 
+        .circleAnim {
+            margin: 0rem !important;
+        }
+
         .circleImg {
-            transform: scale(0.5) !important;
+            transform: scale(0.7) !important;
 
         }
     }
