@@ -1,0 +1,157 @@
+#infinity {
+    animation: rotation 4s ease-in-out infinite alternate;
+    // border: 2px solid red;
+    transform-origin: 50% 50%;
+}
+
+
+#right_robo {
+    animation: move 6s linear infinite alternate;
+}
+
+#left_robo {
+    animation: move-left 6s linear infinite alternate-reverse;
+}
+
+#head {
+    animation: rotation-head 3s ease-in-out infinite alternate;
+    // border: 2px solid red;
+    transform-origin: bottom center;
+}
+
+#head_2 {
+    animation: rotation-head_2 3s ease-in-out infinite alternate;
+    // border: 2px solid red;
+    transform-origin: bottom center;
+}
+
+#left_hand {
+    animation: rotation-left-hand 3s ease-in-out infinite alternate;
+    transform-origin: top right;
+}
+
+#right_hand {
+    animation: rotation-right-hand 4s ease-in-out infinite alternate-reverse;
+    transform-origin: top right;
+    // border: 2px solid red;
+}
+
+#left_hand_2 {
+    animation: rotation-left-hand-2 4s ease-in-out infinite alternate-reverse;
+    transform-origin: top right;
+    // border: 2px solid red;
+}
+
+#right_hand_2 {
+    animation: rotation-right-hand-2 4s ease-in-out infinite alternate;
+    transform-origin: top left;
+}
+
+#right_pole {
+    animation: rotation-right-hand-2 5s ease-in-out infinite alternate;
+    transform-origin: bottom center;
+}
+
+#left_pole {
+    animation: rotation-right-hand-2 5.6s ease-in-out infinite alternate;
+    transform-origin: bottom center;
+}
+
+.vector:nth-child(odd) {
+    animation: move 8s linear infinite alternate;
+}
+
+.vector:nth-child(even) {
+    animation: move 7s linear infinite alternate-reverse;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(2%, -5%);
+    }
+
+    100% {
+        transform: translate(0, 0%);
+    }
+}
+
+@keyframes move-left {
+    0% {
+        transform: translate(0%, -5%);
+    }
+
+    100% {
+        transform: translate(0, 0%);
+    }
+}
+
+
+@keyframes rotation {
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes rotation-head {
+    0% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+@keyframes rotation-head_2 {
+    0% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotation-left-hand {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(1.5deg);
+    }
+}
+
+@keyframes rotation-right-hand {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes rotation-left-hand-2 {
+    0% {
+        transform: rotate(-0.5deg);
+    }
+
+    100% {
+        transform: rotate(0.2deg);
+    }
+}
+
+@keyframes rotation-right-hand-2 {
+    0% {
+        transform: rotate(-0.5deg);
+    }
+
+    100% {
+        transform: rotate(1deg);
+    }
+}

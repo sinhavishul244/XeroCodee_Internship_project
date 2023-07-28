@@ -8,9 +8,12 @@ import CircleAnim from '@/components/server/CircleAnim'
 import Card from '@/components/server/Card'
 import cardBgImg from '../public/cardsbg.png'
 import cardCircleBgImg from '../public/cardCircleBg.png'
+import { gsap } from 'gsap'
 
 
 export default function Home() {
+
+
   return (
     <main className='mainContainer'>
       <div className="hero">
